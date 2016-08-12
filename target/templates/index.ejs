@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- your webpage info goes here -->
+
+    <title>Easy Shopping Portal</title>
+
+    <meta name="author" content="your name" />
+    <meta name="description" content="" />
+
+    <!-- you should always add your stylesheet (css) in the head tag so that it starts loading before the page html is being displayed -->
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script   src="https://code.jquery.com/jquery-3.1.0.js"   integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="   crossorigin="anonymous"></script>
+</head>
+<body>
+<script>
+     function onset(image){
+
+
+         $.post( "/set", {link:image.src} ).done(function() //ajax call
+         {console.log("true");})
+         //console.log(image.src);
+
+
+
+       //  var data={"data":image.src}
+         //new EJS({url: '/templates/thank.ejs'}).render(data)
+
+
+
+    }
+
+    </script>
+
+<!-- webpage content goes here in the body -->
+
+<div id="page">
+    <div id="logo">
+        <h1><a href="/" id="logoLink">Easy Shopping Portal</a></h1>
+    </div>
+    </div>
+    <div id="nav">
+        <ul>
+            <li><a href="#/Bags.html" >Bags</a></li>
+            <li><a href="#/watches.html">Watches</a></li>
+            <li><a href="#/Baby Products.html">Baby Products</a></li>
+
+            <li><a href="#/fashion.html">Fashion</a></li>
+            <li><a href="#/Mobiles.html">Mobiles</a></li>
+            <li><a href="#/Furniture.html">Furniture</a></li>
+
+            >
+        </ul>
+    </div>
+    <form method="post" >
+    <div id="content">
+        <h2>Our Awesome Products</h2>
+
+        <div>
+            <input type="image" src="https://upload.wikimedia.org/wikipedia/commons/d/db/Pink_Birkin_bag.jpg" alt=""  height="300" width="300" onclick="onset(this)"/>
+            <input type="image" src="https://upload.wikimedia.org/wikipedia/commons/d/db/Pink_Birkin_bag.jpg" alt=""  height="300" width="300" onclick="onset()"/>
+
+        </div>
+        </div>
+    </form>
+
+
+
+
+
+
+        <div id="footer">
+        <p>
+            Webpage made by <a href="/" target="_blank">[your name]</a>
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
